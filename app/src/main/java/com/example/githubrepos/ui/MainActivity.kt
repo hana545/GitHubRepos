@@ -1,9 +1,8 @@
 package com.example.githubrepos.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import com.example.githubrepos.R
 import com.example.githubrepos.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -14,11 +13,5 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnNavigate.setOnClickListener {
-            supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-            findNavController(R.id.fragmentContainer).navigate(R.id.action_homFragment_to_detailsFragment)
-
-        }
     }
 }

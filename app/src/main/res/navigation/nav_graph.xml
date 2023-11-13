@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homFragment"
-        android:name="com.example.githubrepos.ui.RepositoriesFragment"
+        android:name="com.example.githubrepos.ui.Repositories.RepositoriesFragment"
         android:label="Repository List"
         tools:layout="@layout/fragment_repositories">
         <action
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.example.githubrepos.ui.RepositoryDetailsFragment"
+        android:name="com.example.githubrepos.ui.RepositoryDetails.RepositoryDetailsFragment"
         android:label="Repository Details"
         tools:layout="@layout/fragment_repository_details">
         <action

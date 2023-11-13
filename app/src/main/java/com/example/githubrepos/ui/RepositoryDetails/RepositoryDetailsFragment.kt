@@ -1,20 +1,14 @@
-package com.example.githubrepos.ui
+package com.example.githubrepos.ui.RepositoryDetails
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.view.MenuHost
-import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Lifecycle
-import com.example.githubrepos.R
-import com.example.githubrepos.databinding.FragmentRepositoriesBinding
 import com.example.githubrepos.databinding.FragmentRepositoryDetailsBinding
+import com.example.githubrepos.ui.MainActivity
 
 class RepositoryDetailsFragment : Fragment() {
 
