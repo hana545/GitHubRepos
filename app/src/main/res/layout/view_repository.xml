@@ -5,24 +5,102 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="10dp"
-    android:layout_marginVertical="16dp"
+    android:layout_marginVertical="10dp"
     android:backgroundTint="@color/white"
     app:cardCornerRadius="20dp"
     app:cardElevation="5dp">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="10dp">
         <TextView
             android:id="@+id/viewRepositoryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:text="Repo Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/viewRepositoryImageAuthor"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewRepositoryName"/>
+
+        <TextView
+            android:id="@+id/viewRepositoryAuthor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:textSize="15sp"
-            android:text="Repo Name"
+            android:textSize="18sp"
+            android:text="Author"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toEndOf="@+id/viewRepositoryImageAuthor"
+            app:layout_constraintTop_toBottomOf="@+id/viewRepositoryName" />
+
+        <ImageView
+            android:id="@+id/viewRepositoryIconWatchers"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@android:drawable/ic_menu_add"
+            app:layout_constraintEnd_toStartOf="@+id/viewRepositoryWatchers"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/viewRepositoryWatchers"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:text="0"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/viewRepositoryIconForks"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@android:drawable/ic_menu_add"
+            app:layout_constraintEnd_toStartOf="@+id/viewRepositoryForks"
+            app:layout_constraintTop_toBottomOf="@+id/viewRepositoryIconWatchers" />
+
+        <TextView
+            android:id="@+id/viewRepositoryForks"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:text="0"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewRepositoryWatchers" />
+        <ImageView
+            android:id="@+id/viewRepositoryIconIssues"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@android:drawable/ic_menu_add"
+            app:layout_constraintEnd_toStartOf="@+id/viewRepositoryIssues"
+            app:layout_constraintTop_toBottomOf="@+id/viewRepositoryIconForks"  />
+
+        <TextView
+            android:id="@+id/viewRepositoryIssues"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:text="0"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewRepositoryForks" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

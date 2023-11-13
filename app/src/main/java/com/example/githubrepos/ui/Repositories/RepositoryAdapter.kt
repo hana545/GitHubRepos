@@ -12,6 +12,10 @@ class RepositoryAdapter(private val repositoryList : ArrayList<Repository>) :Rec
     class RepositoryViewHolder(val binding: ViewRepositoryBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(data: Repository) {
             binding.viewRepositoryName.text = data.name
+            binding.viewRepositoryAuthor.text = data.author
+            binding.viewRepositoryForks.text = data.forks.toString()
+            binding.viewRepositoryWatchers.text = data.watchers.toString()
+            binding.viewRepositoryIssues.text = data.issues.toString()
         }
     }
 
