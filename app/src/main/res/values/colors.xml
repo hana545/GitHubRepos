@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="light_black">#24292e</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="dark_grey">#2b3137</color>
+    <color name="light_grey">#fafbfc</color>
+
+    <color name="dark_green">#004017</color>
+    <color name="green">#2dba4e</color>
+    <color name="light_green">#97E4A9</color>
+
+    <color name="dark_torquise">#065945</color>
+    <color name="torquise">#2F816D</color>
+    <color name="light_torquise">#74DAC1</color>
 </resources>
