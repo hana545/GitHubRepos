@@ -1,13 +1,15 @@
 package com.example.githubrepos.ui.Repositories
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.example.githubrepos.databinding.ViewRepositoryBinding
 import com.example.githubrepos.model.Repository
 
-class RepositoryAdapter(private val repositoryList : ArrayList<Repository>) :RecyclerView.Adapter<RepositoryAdapter.RepositoryViewHolder>(){
+class RepositoryAdapter(private var repositoryList: MutableList<Repository>,
+                        private var onItemClick : (Repository) -> Unit
+) :RecyclerView.Adapter<RepositoryAdapter.RepositoryViewHolder>(){
 
     class RepositoryViewHolder(val binding: ViewRepositoryBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(data: Repository) {
@@ -17,7 +19,11 @@ class RepositoryAdapter(private val repositoryList : ArrayList<Repository>) :Rec
             binding.viewRepositoryWatchers.text = data.watchers.toString()
             binding.viewRepositoryIssues.text = data.issues.toString()
         }
+        fun onClick(action: (Repository) -> Unit, repo: Repository) {
+            binding.viewRepositoryCardView.setOnClickListener { action(repo) }
+        }
     }
+
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepositoryViewHolder {
@@ -32,6 +38,12 @@ class RepositoryAdapter(private val repositoryList : ArrayList<Repository>) :Rec
 
     override fun onBindViewHolder(holder: RepositoryViewHolder, position: Int) {
         holder.bind(repositoryList[position])
+        holder.onClick(onItemClick, repositoryList[position])
+    }
+
+    fun setItems(repos: MutableList<Repository>) {
+        repositoryList = repos
+        notifyDataSetChanged()
     }
 
 }

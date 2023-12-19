@@ -10,10 +10,11 @@
         android:name="com.example.githubrepos.ui.Repositories.RepositoriesFragment"
         android:label="Repository List"
         tools:layout="@layout/fragment_repositories">
+
         <action
-            android:id="@+id/action_homFragment_to_detailsFragment"
-            app:destination="@+id/detailsFragment"
-            />
+            android:id="@+id/action_homeFragment_to_detailsFragment"
+            app:destination="@+id/detailsFragment">
+        </action>
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
@@ -24,6 +25,11 @@
             android:id="@+id/action_detailsFragment_to_homFragment"
             app:popUpTo="@+id/home_fragment"
             />
-    </fragment>
+        <argument
+            android:name="repo"
+            app:argType="com.example.githubrepos.model.Repository"
+            app:nullable="true"
+            android:defaultValue="@null" />
+       </fragment>
 
 </navigation>

@@ -7,13 +7,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.navArgs
 import com.example.githubrepos.databinding.FragmentRepositoryDetailsBinding
+import com.example.githubrepos.model.Repository
 import com.example.githubrepos.ui.MainActivity
 
 class RepositoryDetailsFragment : Fragment() {
 
     private lateinit var _binding: FragmentRepositoryDetailsBinding
     private val binding get() = _binding
+
+    private val viewModel by viewModels<RepositoryDetailsViewModel>()
+    private val args : RepositoryDetailsFragmentArgs by navArgs()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,13 +37,29 @@ class RepositoryDetailsFragment : Fragment() {
 
         initActionBar()
 
+        bindRepoData()
+
+    }
+
+    private fun bindRepoData() {
+        val repo = args.repo!!
+        binding.apply {
+            repoDetailsDescription.text  = repo.name
+            repoDetailsAuthorName.text = repo.author
+            repoDetailsCreatedAt.text = repo.created
+            repoDetailsUpdatedAt.text = repo.updated
+            repoDetailsStars.text = repo.forks.toString()
+            repoDetailsWatchers.text = repo.watchers.toString()
+            repoDetailsIssues.text = repo.issues.toString()
+            repoDetailsForks.text = repo.forks.toString()
+        }
     }
 
     private fun initActionBar() {
         (activity as MainActivity).apply {
             setSupportActionBar(binding.toolbar)
-            binding.toolbar.title = "[Repo Title] Details"
-            binding.btnGoToGit.setOnClickListener {
+            binding.toolbar.title = "${args.repo?.name} Details"
+            binding.repoDetailsBtnGoToGit.setOnClickListener {
                 Toast.makeText(requireContext(), "Navigate to browser", Toast.LENGTH_SHORT).show()
             }
             supportActionBar?.apply {
