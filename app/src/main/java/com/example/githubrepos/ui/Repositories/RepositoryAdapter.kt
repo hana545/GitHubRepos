@@ -4,14 +4,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
-import com.example.githubrepos.databinding.ViewRepositoryBinding
+import com.example.githubrepos.databinding.ItemRepositoryBinding
 import com.example.githubrepos.model.Repository
 
 class RepositoryAdapter(private var repositoryList: MutableList<Repository>,
                         private var onItemClick : (Repository) -> Unit
 ) :RecyclerView.Adapter<RepositoryAdapter.RepositoryViewHolder>(){
 
-    class RepositoryViewHolder(val binding: ViewRepositoryBinding) : RecyclerView.ViewHolder(binding.root) {
+    class RepositoryViewHolder(val binding: ItemRepositoryBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(data: Repository) {
             binding.viewRepositoryName.text = data.name
             binding.viewRepositoryAuthor.text = data.author
@@ -27,7 +27,7 @@ class RepositoryAdapter(private var repositoryList: MutableList<Repository>,
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepositoryViewHolder {
-        val binding = ViewRepositoryBinding
+        val binding = ItemRepositoryBinding
             .inflate(LayoutInflater.from(parent.context), parent, false)
         return RepositoryViewHolder(binding)
     }
