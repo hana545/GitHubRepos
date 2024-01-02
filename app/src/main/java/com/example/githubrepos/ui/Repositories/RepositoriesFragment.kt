@@ -28,16 +28,11 @@ class RepositoriesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnNavigate.setOnClickListener {
-           //findNavController().navigate(R.id.action_homeFragment_to_detailsFragment)
-        }
-
         viewModel.repoList.observe(viewLifecycleOwner) { repos ->
             updateItems(repos)
         }
 
         initRepositoriesRecycler()
-
 
     }
 
