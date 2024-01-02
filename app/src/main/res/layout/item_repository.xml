@@ -40,8 +40,9 @@
 
         <ImageView
             android:id="@+id/viewRepositoryImageAuthor"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/user_avatar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/viewRepositoryIconForks"
             app:layout_constraintHorizontal_bias="0.1"
