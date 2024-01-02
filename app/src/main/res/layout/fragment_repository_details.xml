@@ -85,6 +85,7 @@
                     android:id="@+id/repoDetailsAuthorImage"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
+                    app:tint="@color/green"
                     android:src="@drawable/user_avatar"
                     android:layout_margin="10dp"
                     android:layout_weight="0.2"/>
@@ -334,20 +335,10 @@
                 android:textSize="20sp"
                 android:layout_margin="10dp"/>
             <com.google.android.material.chip.ChipGroup
+                android:id="@+id/repoDetailsLanguageChips"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp">
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="lang1"
-                    style="@style/Widget.MaterialComponents.Chip.Action"/>
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="lang2"
-                    style="@style/Widget.MaterialComponents.Chip.Action"/>
-
             </com.google.android.material.chip.ChipGroup>
 
             <TextView

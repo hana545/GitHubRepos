@@ -10,9 +10,12 @@ data class Repository(
     val id: String,
     val name: String,
     val author: String,
+    val description: String,
     val created: String,
     val updated: String,
     val watchers: Int,
     val issues: Int,
-    val forks: Int
+    val forks: Int,
+    val languages: ArrayList<String>
+   //val collaborators: ArrayList<User>
 ) : Parcelable

@@ -9,9 +9,11 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
+import com.example.githubrepos.R
 import com.example.githubrepos.databinding.FragmentRepositoryDetailsBinding
 import com.example.githubrepos.model.Repository
 import com.example.githubrepos.ui.MainActivity
+import com.google.android.material.chip.Chip
 
 class RepositoryDetailsFragment : Fragment() {
 
@@ -46,6 +48,7 @@ class RepositoryDetailsFragment : Fragment() {
         binding.apply {
             repoDetailsDescription.text  = repo.name
             repoDetailsAuthorName.text = repo.author
+            repoDetailsDescription.text = repo.description
             repoDetailsCreatedAt.text = repo.created
             repoDetailsUpdatedAt.text = repo.updated
             repoDetailsStars.text = repo.forks.toString()
@@ -53,6 +56,15 @@ class RepositoryDetailsFragment : Fragment() {
             repoDetailsIssues.text = repo.issues.toString()
             repoDetailsForks.text = repo.forks.toString()
         }
+        for (lang in repo.languages){
+            createLanguageChip(lang)
+        }
+    }
+
+    private fun createLanguageChip(language : String) {
+        val chip = this.layoutInflater.inflate(R.layout.layout_language_chip, binding.repoDetailsLanguageChips, false) as Chip
+        chip.text = language
+        binding.repoDetailsLanguageChips.addView(chip)
     }
 
     private fun initActionBar() {
