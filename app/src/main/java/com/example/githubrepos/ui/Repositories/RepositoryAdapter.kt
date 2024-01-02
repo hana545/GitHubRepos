@@ -14,7 +14,7 @@ class RepositoryAdapter(private var repositoryList: MutableList<Repository>,
     class RepositoryViewHolder(val binding: ItemRepositoryBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(data: Repository) {
             binding.viewRepositoryName.text = data.name
-            binding.viewRepositoryAuthor.text = data.author
+            binding.viewRepositoryAuthor.text = data.author.name
             binding.viewRepositoryForks.text = data.forks.toString()
             binding.viewRepositoryWatchers.text = data.watchers.toString()
             binding.viewRepositoryIssues.text = data.issues.toString()

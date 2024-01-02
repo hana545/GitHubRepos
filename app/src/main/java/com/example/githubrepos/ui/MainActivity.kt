@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.githubrepos.databinding.ActivityMainBinding
+import com.example.githubrepos.networking.ApiModule
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,5 +14,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        ApiModule.initRetrofit(this)
     }
 }

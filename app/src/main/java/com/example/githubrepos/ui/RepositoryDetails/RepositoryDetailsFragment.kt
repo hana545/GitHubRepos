@@ -47,7 +47,7 @@ class RepositoryDetailsFragment : Fragment() {
         val repo = args.repo!!
         binding.apply {
             repoDetailsDescription.text  = repo.name
-            repoDetailsAuthorName.text = repo.author
+            repoDetailsAuthorName.text = repo.author.name
             repoDetailsDescription.text = repo.description
             repoDetailsCreatedAt.text = repo.created
             repoDetailsUpdatedAt.text = repo.updated
@@ -56,9 +56,9 @@ class RepositoryDetailsFragment : Fragment() {
             repoDetailsIssues.text = repo.issues.toString()
             repoDetailsForks.text = repo.forks.toString()
         }
-        for (lang in repo.languages){
+        /*for (lang in repo.languages){
             createLanguageChip(lang)
-        }
+        }*/
     }
 
     private fun createLanguageChip(language : String) {

@@ -4,18 +4,26 @@ import android.os.Parcel
 import android.os.Parcelable
 import kotlinx.parcelize.Parceler
 import kotlinx.parcelize.Parcelize
+import kotlinx.serialization.SerialName
 
-@Parcelize
+@kotlinx.serialization.Serializable
 data class Repository(
-    val id: String,
-    val name: String,
-    val author: String,
-    val description: String,
-    val created: String,
-    val updated: String,
-    val watchers: Int,
-    val issues: Int,
-    val forks: Int,
-    val languages: ArrayList<String>
-   //val collaborators: ArrayList<User>
-) : Parcelable
+    @SerialName("id") val id: Int,
+    @SerialName("name") val name: String,
+    @SerialName("owner") val author: User,
+    @SerialName("git_url") val url: String,
+    @SerialName("description") val description: String?,
+    @SerialName("created_at") val created: String,
+    @SerialName("updated_at") val updated: String,
+    @SerialName("stargazers_count") val stars: Int,
+    @SerialName("watchers_count") val watchers: Int,
+    @SerialName("open_issues_count") val issues: Int,
+    @SerialName("forks_count") val forks: Int,
+    //val languages: ArrayList<String>
+    //val collaborators: ArrayList<User>
+) : java.io.Serializable
+
+@kotlinx.serialization.Serializable
+data class ListRepositoriesResponse(
+    @SerialName("items") val repos: MutableList<Repository>
+)

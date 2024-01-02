@@ -1,9 +1,13 @@
 package com.example.githubrepos.ui.Repositories
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.githubrepos.model.Repository
+import com.example.githubrepos.networking.ApiModule
+import kotlinx.coroutines.launch
 
 class RepositoriesViewModel() : ViewModel() {
 
@@ -11,11 +15,11 @@ class RepositoriesViewModel() : ViewModel() {
     val repoList: LiveData<MutableList<Repository>> get() = _repoList
 
     init {
-        //_repoList.value = mutableListOf()
-        getRepositories()
+        _repoList.value = mutableListOf()
+        getRepositories("a")
     }
 
-
+    /*
     private fun getRepositories(){
         _repoList.value = arrayListOf(
             Repository("501","Harshita","Harshita@gmail.com", "blablabla", "", "", 5,8,1, arrayListOf("C", "Python")),
@@ -29,5 +33,25 @@ class RepositoriesViewModel() : ViewModel() {
             Repository("509","abc","abc@gmail.com","blablabla","", "", 8,0,0, arrayListOf("Assembly")),
             Repository("510","pqr","pqr@gmail.com","blablabla","", "", 4,6,1, arrayListOf("C")),
         )
+    }*/
+    fun getRepositories(query: String) {
+        viewModelScope.launch {
+            try {
+                listRepositories(query)
+            } catch (ups: Exception) {
+                Log.e("REPOLIST", "ups " + ups.toString())
+            }
+        }
+
+
     }
+
+    private suspend fun listRepositories(query: String) {
+        val response = ApiModule.retrofit.searchRepositories(query)
+        if (response.isSuccessful) {
+            Log.i("REPOLIST", "response ${response.body()}")
+            _repoList.value = response.body()?.repos
+        }
+    }
+
 }
