@@ -20,7 +20,6 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="25sp"
-            android:text="Repo Name"
             app:layout_constraintEnd_toStartOf="@+id/viewRepositoryIconWatchers"
             app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,8 +36,6 @@
             app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/viewRepositoryName"/>
-
-        />
 
 
         <ImageView
@@ -57,7 +54,6 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="18sp"
-            android:text="Author"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/viewRepositoryIconForks"
             app:layout_constraintHorizontal_bias="0.05"
@@ -80,7 +76,6 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginHorizontal="10dp"
-            android:text="0"
             android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -100,7 +95,6 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginHorizontal="10dp"
-            android:text="0"
             android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/viewRepositoryWatchers" />
@@ -120,7 +114,6 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginHorizontal="10dp"
-            android:text="0"
             android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/viewRepositoryForks" />

@@ -25,13 +25,13 @@
             android:id="@+id/inputSearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Search"
+            android:hint="@string/search_hintPlaceholder"
             android:layout_weight="0.6"
            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sort by "
+            android:text="@string/sort_by_placeholder"
             android:layout_weight="0.1"/>
         <Spinner
             android:layout_width="wrap_content"

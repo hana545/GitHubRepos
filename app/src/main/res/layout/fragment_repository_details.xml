@@ -56,7 +56,7 @@
                 android:id="@+id/repoDetailsDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Description"
+                android:text="@string/description_placeholder"
                 android:gravity="center"
                 android:textSize="18sp"
                 android:textStyle="italic"
@@ -69,7 +69,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Created by:"
+                android:text="@string/created_by_title"
                 android:textSize="15sp"
                 android:textStyle="italic"
                 android:layout_marginVertical="10dp"
@@ -94,7 +94,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:text="Author Name Placeholder"
+                    android:text="@string/author_name_placeholder"
                     android:layout_weight="0.7"/>
 
                 <ImageButton
@@ -102,7 +102,7 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:backgroundTint="#00000000"
-                    android:tint="@color/light_green"
+                    app:tint="@color/light_green"
                     android:src="@drawable/ic_info_circle"
                     android:layout_weight="0.1"/>
 
@@ -127,7 +127,7 @@
                     android:layout_margin="10dp"
                     android:layout_row="0"
                     android:layout_column="0"
-                    android:layout_gravity="fill">>
+                    android:layout_gravity="fill">
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -137,7 +137,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="created_at"
+                            android:text="@string/created_title"
                             android:textSize="20sp"
                             android:padding="5dp"
                             android:layout_gravity="center"/>
@@ -145,7 +145,7 @@
                             android:id="@+id/repoDetailsCreatedAt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="data"
+                            android:text="@string/data_placeholder"
                             android:textSize="20sp"
                             android:padding="5dp"
                             android:layout_gravity="center"/>
@@ -160,7 +160,7 @@
                     android:layout_margin="10dp"
                     android:layout_row="0"
                     android:layout_column="1"
-                    android:layout_gravity="fill">>
+                    android:layout_gravity="fill">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -172,7 +172,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="updated_at"
+                            android:text="@string/updated_title"
                             android:textSize="20sp"
                             android:padding="5dp"
                             android:layout_gravity="center"/>
@@ -180,7 +180,7 @@
                             android:id="@+id/repoDetailsUpdatedAt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="data"
+                            android:text="@string/data_placeholder"
                             android:textSize="20sp"
                             android:padding="5dp"
                             android:layout_gravity="center"/>
@@ -206,7 +206,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="stars"
+                            android:text="@string/stars_title"
                             android:textSize="20sp"
                             android:padding="5dp"
                             android:layout_gravity="center"/>
@@ -214,7 +214,7 @@
                             android:id="@+id/repoDetailsStars"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="data"
+                            android:text="@string/data_placeholder"
                             android:textSize="20sp"
                             android:padding="5dp"
                             android:layout_gravity="center"/>
@@ -240,7 +240,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="watchers"
+                            android:text="@string/watchers_title"
                             android:textSize="20sp"
                             android:padding="5dp"
                             android:layout_gravity="center"/>
@@ -248,7 +248,7 @@
                             android:id="@+id/repoDetailsWatchers"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="data"
+                            android:text="@string/data_placeholder"
                             android:textSize="20sp"
                             android:padding="5dp"
                             android:layout_gravity="center"/>
@@ -263,7 +263,7 @@
                     android:layout_margin="10dp"
                     android:layout_row="2"
                     android:layout_column="0"
-                    android:layout_gravity="fill">>
+                    android:layout_gravity="fill">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -274,7 +274,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="issues"
+                            android:text="@string/issues_title"
                             android:textSize="20sp"
                             android:padding="5dp"
                             android:layout_gravity="center"/>
@@ -282,7 +282,7 @@
                             android:id="@+id/repoDetailsIssues"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="data"
+                            android:text="@string/data_placeholder"
                             android:textSize="20sp"
                             android:padding="5dp"
                             android:layout_gravity="center"/>
@@ -308,7 +308,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="forks"
+                            android:text="@string/forks_title"
                             android:textSize="20sp"
                             android:padding="5dp"
                             android:layout_gravity="center"/>
@@ -316,7 +316,7 @@
                             android:id="@+id/repoDetailsForks"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="data"
+                            android:text="@string/data_placeholder"
                             android:textSize="20sp"
                             android:padding="5dp"
                             android:layout_gravity="center"/>
@@ -329,7 +329,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Languages:"
+                android:text="@string/languages_title"
                 android:textSize="20sp"
                 android:layout_margin="10dp"/>
             <com.google.android.material.chip.ChipGroup
@@ -352,7 +352,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Contributors"
+                android:text="@string/contributors_title"
                 android:textSize="20sp"
                 android:layout_margin="10dp"/>
             <TextView
