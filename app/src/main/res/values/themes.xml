@@ -2,8 +2,28 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.GitHubRepos" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorOnPrimary">@color/light_grey</item>
+        <item name="colorSurface">@color/light_green</item>
+        <item name="colorPrimaryDark">@color/dark_green</item>
+        <item name="colorPrimaryVariant">@color/dark_green</item>
+
+        <item name="colorSecondary">@color/light_torquise</item>
+        <item name="colorOnSecondary">@color/dark_grey</item>
+        <item name="colorOnSurface">@color/dark_grey</item>
+        <item name="colorSecondaryVariant">@color/dark_torquise</item>
+
+        <item name="colorAccent">@color/light_green</item>
     </style>
 
     <style name="Theme.GitHubRepos" parent="Base.Theme.GitHubRepos" />
+
+    <style name="ExpandedAppBar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="CollapsedAppBar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

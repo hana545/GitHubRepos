@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">GitHub Repos</string>
+    <string name="description_placeholder">Description</string>
+    <string name="created_by_title">Created by:</string>
+    <string name="author_name_placeholder">Author Name Placeholder</string>
+    <string name="created_title">Created</string>
+    <string name="data_placeholder">data</string>
+    <string name="updated_title">Updated</string>
+    <string name="stars_title">Stars</string>
+    <string name="watchers_title">Watchers</string>
+    <string name="issues_title">Issues</string>
+    <string name="forks_title">Forks</string>
+    <string name="languages_title">Languages:</string>
+    <string name="contributors_title">Contributors</string>
+    <string name="search_hintPlaceholder">Search</string>
+    <string name="sort_by_placeholder">Sort by</string>
 </resources>

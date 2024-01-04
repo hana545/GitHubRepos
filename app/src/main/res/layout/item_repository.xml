@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="5dp"
+    android:backgroundTint="@color/white"
+    android:id="@+id/viewRepositoryCardView"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="5dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/viewRepositoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toStartOf="@+id/viewRepositoryIconWatchers"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/viewRepositoryDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:dividerColor="@color/light_grey"
+            android:layout_marginVertical="5dp"
+            android:layout_marginEnd="70dp"
+            app:layout_constraintEnd_toStartOf="@id/viewRepositoryIconForks"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewRepositoryName"/>
+
+
+        <ImageView
+            android:id="@+id/viewRepositoryImageAuthor"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/user_avatar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/viewRepositoryIconForks"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewRepositoryDivider"/>
+
+        <TextView
+            android:id="@+id/viewRepositoryAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/viewRepositoryIconForks"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toEndOf="@+id/viewRepositoryImageAuthor"
+            app:layout_constraintTop_toBottomOf="@+id/viewRepositoryDivider" />
+
+        <ImageView
+            android:id="@+id/viewRepositoryIconWatchers"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_watcher"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/viewRepositoryWatchers"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/viewRepositoryWatchers"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/viewRepositoryIconForks"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_gitfork"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/viewRepositoryForks"
+            app:layout_constraintTop_toBottomOf="@+id/viewRepositoryIconWatchers" />
+
+        <TextView
+            android:id="@+id/viewRepositoryForks"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewRepositoryWatchers" />
+        <ImageView
+            android:id="@+id/viewRepositoryIconIssues"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_star"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/viewRepositoryIssues"
+            app:layout_constraintTop_toBottomOf="@+id/viewRepositoryIconForks"  />
+
+        <TextView
+            android:id="@+id/viewRepositoryIssues"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewRepositoryForks" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
