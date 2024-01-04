@@ -347,12 +347,13 @@
                 android:text="@string/contributors_title"
                 android:textSize="20sp"
                 android:layout_margin="10dp"/>
-            <TextView
-                android:layout_width="wrap_content"
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/repoDetailsRecyclerViewContributors"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="-list of users-"
-                android:textSize="20sp"
-                android:layout_margin="10dp"/>
+                android:paddingBottom="20dp"
+                android:clipToPadding="false"/>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

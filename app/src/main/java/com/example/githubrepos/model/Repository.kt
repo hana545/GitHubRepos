@@ -10,6 +10,7 @@ import kotlinx.serialization.SerialName
 data class Repository(
     @SerialName("id") val id: Int,
     @SerialName("name") val name: String,
+    @SerialName("full_name") val fullName: String,
     @SerialName("owner") val author: User,
     @SerialName("git_url") val url: String,
     @SerialName("description") val description: String?,
@@ -19,8 +20,8 @@ data class Repository(
     @SerialName("watchers_count") val watchers: Int,
     @SerialName("open_issues_count") val issues: Int,
     @SerialName("forks_count") val forks: Int,
-    //val languages: ArrayList<String>
-    //val collaborators: ArrayList<User>
+    @SerialName("languages_url") val languagesUrl: String,
+    @SerialName("contributors_url") val contributorsUrl: String
 ) : java.io.Serializable
 
 @kotlinx.serialization.Serializable

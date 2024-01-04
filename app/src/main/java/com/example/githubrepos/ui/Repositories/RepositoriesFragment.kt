@@ -38,7 +38,7 @@ class RepositoriesFragment : Fragment() {
 
     private fun initRepositoriesRecycler() {
         repoAdapter = RepositoryAdapter(mutableListOf()){ repo ->
-            val direction = RepositoriesFragmentDirections.actionHomeFragmentToDetailsFragment().setRepo(repo)
+            val direction = RepositoriesFragmentDirections.actionHomeFragmentToDetailsFragment(repo.name, repo.author.name)
             findNavController().navigate(direction)
         }
         binding.recylerViewRepositories.apply{
